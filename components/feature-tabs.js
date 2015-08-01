@@ -1,5 +1,6 @@
 import React from 'react';
 import BaseComponent from './base.js';
+import Feature from './feature.js';
 import mui, { Tab, Tabs } from 'material-ui';
 
 class FeatureTabs extends BaseComponent {
@@ -9,14 +10,18 @@ class FeatureTabs extends BaseComponent {
   render () {
     return <div>
         <Tabs>
-            <Tab label="ES7/ES2016">
-            ES2016
-            </Tab>
             <Tab label="ES6/ES2015">
-            ES2015
+                <Feature />
+            </Tab>
+            <Tab label="ES7/ES2016">
+                <img src="http://33.media.tumblr.com/5e0cc26f0166d9fae90c6e015582117a/tumblr_n7w5d0l8Cc1qiywueo3_500.gif"
+                    alt="Backyard Banditry"
+                    style={{ position: 'relative',margin: 'auto',top: 33,left: 0,right: 0,bottom: 0}}/>
             </Tab>
             <Tab label="ES5">
-            ES2015
+                <img src="http://33.media.tumblr.com/5e0cc26f0166d9fae90c6e015582117a/tumblr_n7w5d0l8Cc1qiywueo3_500.gif"
+                    alt="Backyard Banditry"
+                    style={{ position: 'relative',margin: 'auto',top: 33,left: 0,right: 0,bottom: 0}}/>
             </Tab>
         </Tabs>
     </div>
