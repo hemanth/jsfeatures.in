@@ -12,6 +12,7 @@ class JSfeatures extends BaseComponent {
         <AppBar showMenuIconButton={false} title="JSfeatures IN" />
         < hr/>
         <FeatureTabs />
+        <AppBar showMenuIconButton={false} title="Copyright © 2015 - Hemanth.HM" />
     </div>
   }
 }
