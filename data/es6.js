@@ -1,7 +1,7 @@
 module.exports = [{
     arrow: 'let obj = {\n  method: function () {\n    return () => this;\n  }\n};\n// Due to lexical scope obj.method()() <===> obj\n\nlet fact = (n) => { return n === 0 ? 1 : n * fact(n-1); };\n\nlet fib = (n) => { return n < 2 ? n : fib(n-1) + fib(n-2); };\n'
 }, {
-    'block-scope': 'var aboutme = () => {\n  {\n    var wife = 1;\n    let gfs = 10;\n  }\n  console.log(wife,gfs); // 1, undefined.\n}\n'
+    'block-scope': 'var aboutme = () => {\n  {\n    var investment = 1;\n    const salary = 10;\n  }\n  console.log(investment, salary); // 1, salary is not defined.\n}\n'
 }, {
     class: 'class Person {\n  constructor(name) {\n    this.name = name;\n    this.movement = "walks";\n  }\n\n  move(meters) {\n    console.log(`${this.name} ${this.movement} ${meters}m.`);\n  }\n}\n\nclass Hero extends Person {\n  constructor(name, movement) {\n    this.name = name;\n    this.movement = movement;\n  }\n\n  move() {\n    super.move(500);\n  }\n}\n\nlet clark = new Person("Clark Kent");\n\nlet superman = new Hero("Superman", "flies");\n\nclark.move(100);\n// -> Clark Kent walks 100m.\n\nsuperman.move();\n// -> Superman flies 500m.\n\n/* Make a note of:\n\nclass Base {}\nclass Derived extends Base {}\n\n//Here, Derived.prototype will inherit from Base.prototype.\n\nlet parent = {};\nclass Derived prototype parent {}\n*/\n'
 }, {
