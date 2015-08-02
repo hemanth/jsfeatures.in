@@ -5,7 +5,7 @@ module.exports = [{
     }
 }, {
     'block-scope': {
-        code: 'var aboutme = () => {\n  {\n    var wife = 1;\n    let gfs = 10;\n  }\n  console.log(wife,gfs); // 1, undefined.\n}\n',
+        code: 'var aboutme = () => {\n  {\n    var investements = 1;\n    const salary = 10;\n  }\n  console.log(investements,salary); // 1, undefined.\n}\n',
         info: ''
     }
 }, {

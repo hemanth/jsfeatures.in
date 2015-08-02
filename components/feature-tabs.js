@@ -8,7 +8,7 @@ class FeatureTabs extends BaseComponent {
     super()
   }
   render () {
-    return <div>
+    return (<div>
         <Tabs>
             <Tab label="ES7/ES2016">
                 <Feature spec='ES7' />
@@ -22,7 +22,7 @@ class FeatureTabs extends BaseComponent {
                     style={{ position: 'relative',margin: 'auto',top: 3,left: 0,right: 0,bottom: 0}}/>
             </Tab>
         </Tabs>
-    </div>
+    </div>)
   }
 }
 
