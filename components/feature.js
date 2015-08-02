@@ -38,6 +38,8 @@ class Feature extends BaseComponent {
           const name = Object.keys(feature)[0];
           // can avoid this beautification step, using it for now.
           const code = js_beautify(feature[name]['code'], { indent_size: 2 });
+          const info = feature[name]['info'];
+
           return (
               <Paper zDepth={1} key={name}>
                  <h1 id={slugify(name)} style={h1Style}>
