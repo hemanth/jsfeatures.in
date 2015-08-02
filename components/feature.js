@@ -6,8 +6,10 @@ import Highlight from 'react-highlight';
 
 import ES6 from '../data/es6.js'
 import ES7 from '../data/es7.js'
+import ES5 from '../data/es5.js'
 
 const specs = {
+    ES5: ES5,
     ES6: ES6,
     ES7: ES7
 }
