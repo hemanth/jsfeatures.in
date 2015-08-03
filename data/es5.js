@@ -59,7 +59,7 @@ module.exports = [
   { 'Object.isFrozen': { code: `var obj =  {}; Object.freeze(obj); Object.isFrozen(obj) // true`,
       info: 'Checks if a given object is frozen.' } },
 
-  { 'Object.isExtensible': { code: `var obj =  {}; Object.preventExtensions(obj); Object.isExtensible(obj) // true`,
+  { 'Object.isExtensible': { code: `var obj =  {}; Object.preventExtensions(obj); Object.isExtensible(obj) // false`,
         info: 'Checks if the given object can be extended.' } },
 
   { 'Object.getOwnPropertyDescriptor': { code: `Object.getOwnPropertyDescriptor({name:'foo'},'name');
@@ -70,7 +70,7 @@ module.exports = [
       info: 'Returns a property descriptor for an own property i.e directly on the object and not the prototype chain.' } },
 
   { 'Object.getOwnPropertyNames': { code: `var obj = { 0: 'f', 1: 'o', 2: 'o' };
-                                            Object.getOwnPropertyNames(obj).sort()); //'0,1,2'`,
+                                            Object.getOwnPropertyNames(obj).sort(); //'0,1,2'`,
       info: 'Returns an array of all properties (enumerable or not) found directly upon a given object.' } },
 
   { 'Date.prototype.toISOString': { code: `(new Date('1998-02-01')).toISOString();
