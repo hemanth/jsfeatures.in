@@ -108,4 +108,22 @@ module.exports = [{
         code: 'var wm = new WeakMap();\n\nwm.set(\'life\'); //TypeError: Invalid value used as weak map key\n\nwm.set(\'life\', \'life\'.length) //TypeError: Invalid value used as weak map key\n\nvar wmk = {};\n\nwm.set(wmk,\'life\');\n\nwm.get(wmk); // "life"\n\nwm.has(wmk); // true\n\nwm.delete(wmk); // true\n\nwm.has(wmk); //false',
         info: ''
     }
+}, {
+    weaksets: {
+        code: ` var ws = new WeakSet();
+                var foo = {};
+                var bar = {};
+
+                ws.add(window);
+                ws.add(foo);
+
+                ws.has(window); // true
+                ws.has(bar);    // false, bar has not been added to the set
+
+                ws.delete(window); // removes window from the set
+                ws.has(window);    // false, window has been removed
+
+                ws.clear(); // empty the whole WeakSet`,
+        info: ''
+    }
 }]

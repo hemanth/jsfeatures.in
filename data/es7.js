@@ -124,17 +124,34 @@ module.exports = [{
         'info': 'Spread properties for object destructuring assignment.'
     }
 }, {
-    'String.prototype.lpad': {
-        'code': `"hello".lpad(4)            #=> "hello"
-              "hello".lpad(20)           #=> "hello               "
-              "hello".lpad(20, \'1234\')   #=> "hello123412341234123"`,
+    'String.prototype.padLeft': {
+        'code': `"hello".padLeft(4)            #=> "hello"
+              "hello".padLeft(20)           #=> "hello               "
+              "hello".padLeft(20, \'1234\')   #=> "hello123412341234123"`,
         'info': 'left justify and pad strings.'
     }
 }, {
-    'String.prototype.rpad': {
-        'code': `"hello".rpad(4)            #=> "hello"
-              "hello".rpad(20)           #=> "               hello"
-              "hello".rpad(20, \'1234\')   #=> "123412341234123hello"`,
+    'String.prototype.padRight': {
+        'code': `"hello".padRight(4)            #=> "hello"
+              "hello".padRight(20)           #=> "               hello"
+              "hello".padRight(20, \'1234\')   #=> "123412341234123hello"`,
+        'info': 'right justify and pad strings.'
+    }
+}, {
+    'String.prototype.trimLeft': {
+        'code': `' \\t \\n LeftTrim   \\t\\n'.trimLeft(); // LeftTrim  \\t\\n`,
+        'info': 'left trim strings.'
+    }
+}, {
+    'String.prototype.trimRight': {
+        'code': `' \\t \\n TimeRight   \\t\\n'.trimLeft(); // \\t \\n LeftRight`,
+        'info': 'right trim strings.'
+    }
+}, {
+    'String.prototype.padRight': {
+        'code': `"hello".padRight(4)            #=> "hello"
+              "hello".padRight(20)           #=> "               hello"
+              "hello".padRight(20, \'1234\')   #=> "123412341234123hello"`,
         'info': 'right justify and pad strings.'
     }
 }, {
