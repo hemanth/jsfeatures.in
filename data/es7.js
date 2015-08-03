@@ -148,13 +148,6 @@ module.exports = [{
         'info': 'right trim strings.'
     }
 }, {
-    'String.prototype.padRight': {
-        'code': `"hello".padRight(4)            #=> "hello"
-              "hello".padRight(20)           #=> "               hello"
-              "hello".padRight(20, \'1234\')   #=> "123412341234123hello"`,
-        'info': 'right justify and pad strings.'
-    }
-}, {
     'Regexp.escape': {
         'code': `RegExp.escape("(*.*)"); // "(*.*)"
               RegExp.escape("｡^･ｪ･^｡") // "｡^･ｪ･^｡"
