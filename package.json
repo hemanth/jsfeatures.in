@@ -1,5 +1,5 @@
 {
-  "name": "react-starter-es6-babel",
+  "name": "jsfeatures.in",
   "browserify": {
     "transform": [
       "babelify"
@@ -7,7 +7,7 @@
   },
   "scripts": {
     "build": "NODE_ENV=production browserify main.js | uglifyjs -cm > public/bundle.js",
-    "start": "ecstatic -p 8000 .",
+    "serve": "ecstatic -p 8000 .",
     "watch": "watchify main.js -o public/bundle.js -dv"
   },
   "dependencies": {
