@@ -8,7 +8,8 @@
   "scripts": {
     "build": "NODE_ENV=production browserify main.js | uglifyjs -cm > public/bundle.js",
     "serve": "ecstatic -p 8000 .",
-    "watch": "watchify main.js -o public/bundle.js -dv"
+    "watch": "watchify main.js -o public/bundle.js -dv",
+    "preinstall": "npm i -g uglifyjs"
   },
   "dependencies": {
     "babelify": "^6.1.3",
