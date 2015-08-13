@@ -16,7 +16,7 @@ class JSfeatures extends BaseComponent {
         href="https://github.com/hemanth/jsfeatures.in"
         linkButton={true} >&#9282;</IconButton>
     );
-    return (<div>
+    return (<div style={{'maxWidth': '1024', 'margin':'auto'}}>
         <AppBar showMenuIconButton={false} title="JSfeatures IN" iconElementRight={githubButton}/>
         <div style={{'paddingTop':10}}/>
         <FeatureTabs />
