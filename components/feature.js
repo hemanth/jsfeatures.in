@@ -31,11 +31,11 @@ class Feature extends BaseComponent {
   render () {
       const h1Style = {
           'paddingBottom': '0.3em',
-          'fontSize': '2.25em',
+          'fontSize': '1em',
           'lineHeight': '1.2',
-          'borderBottom': '1px solid #eee',
-          'marginLeft': '7px'
+          'borderBottom': '1px solid #eee'
       };
+      const spec = this.props.spec;
       const features = specs[this.props.spec].map(function(feature) {
           const name = Object.keys(feature)[0];
           // can avoid this beautification step, using it for now.
@@ -44,12 +44,15 @@ class Feature extends BaseComponent {
 
           return (
               <Paper zDepth={1} key={name}>
-                 <h1 id={slugify(name)} style={h1Style}>
-                     <a href={'#' + slugify(name)}
-                         style={{'textDecoration': 'none', 'color': '#d30'}}>
+                 <h1 id={spec + '-' + slugify(name)} style={h1Style}>
+                     <a href={'#' + spec + '-' + slugify(name)}
+                         style={
+                                {'textDecoration': 'none', 'color': '#d30','fontSize': '1.2em', 'display': 'block', 'padding': '5px 10px'}
+                             }>
                          {name}
                      </a>
                 </h1>
+                <p id={slugify(name)} style={{'paddingLeft':'10px', 'fontSize':'0.8em'}}>{info}</p>
                  <Highlight className='js'>
                      {code}
                  </Highlight>

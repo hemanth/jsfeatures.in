@@ -8,8 +8,12 @@ class FeatureTabs extends BaseComponent {
     super()
   }
   render () {
-    return (<div>
-        <Tabs>
+    // Till material-ui gives an option to update tabIndex programatically.
+    const tabIndex = (window.location.href.indexOf("#ES7")>=0 ? 0 :
+                      window.location.href.indexOf("#ES6")>=0 ? 1 :
+                      window.location.href.indexOf("#ES5")>=0 ? 2 : 0);
+    return (<div style={{'width': '1024', 'margin':'auto'}}>
+        <Tabs initialSelectedIndex={tabIndex}>
             <Tab label="ES7/ES2016" id="es7">
                 <Feature spec='ES7' />
             </Tab>
