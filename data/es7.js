@@ -169,4 +169,27 @@ module.exports = [{
         'code': `TBD`,
         'info': 'TDB'
     }
+
+},{
+    'Observable':{
+        'code': `let data = Observable.from(webSocket).subscribe({
+            next(value)  { console.log(value); },
+            throw(e)     { console.error(e);   },
+            return()     { console.log(‘done’) }
+          });
+          // at some later time:
+          data.unsubscribe();
+
+          Example 2:
+          
+          Observable.of(1, 2, 3, 4, 5)
+          .map(n => n * n)
+          .filter(n => n > 10)
+          .forEach(n => console.log(n))
+          .then(_ => console.log("All done!"));
+
+          `,
+        'info': 'Observable are Compositional and Lazy.(They do not start emitting data until an observer has subscribed)'
+
+    }
 }];
