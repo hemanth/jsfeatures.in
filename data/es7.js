@@ -164,12 +164,6 @@ module.exports = [{
                 ::forEach(x => console.log(x));`,
         'info': ':: Function binding and method extraction'
     }
-}, {
-    'Reflect.Realm': {
-        'code': `TBD`,
-        'info': 'TDB'
-    }
-
 },{
     'Observable':{
         'code': `let data = Observable.from(webSocket).subscribe({
@@ -180,8 +174,6 @@ module.exports = [{
           // at some later time:
           data.unsubscribe();
 
-          Example 2:
-          
           Observable.of(1, 2, 3, 4, 5)
           .map(n => n * n)
           .filter(n => n > 10)
@@ -189,7 +181,13 @@ module.exports = [{
           .then(_ => console.log("All done!"));
 
           `,
-        'info': 'Observable are Compositional and Lazy.(They do not start emitting data until an observer has subscribed)'
+        'info': 'Observable are Compositional and Lazy. (They do not start emitting data until an observer has subscribed)'
 
     }
+},{
+    'Reflect.Realm': {
+        'code': `TBD`,
+        'info': 'TDB'
+    }
+
 }];
