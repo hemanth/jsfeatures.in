@@ -144,7 +144,7 @@ module.exports = [{
     }
 }, {
     'String.prototype.trimRight': {
-        'code': `' \\t \\n TimeRight   \\t\\n'.trimLeft(); // \\t \\n LeftRight`,
+        'code': `' \\t \\n TrimRight   \\t\\n'.trimRight(); // \\t \\n TrimRight`,
         'info': 'right trim strings.'
     }
 }, {
