@@ -149,9 +149,9 @@ module.exports = [{
     }
 }, {
     'Regexp.escape': {
-        'code': `RegExp.escape("(*.*)"); // "(*.*)"
-              RegExp.escape("｡^･ｪ･^｡") // "｡^･ｪ･^｡"
-              RegExp.escape("😊 *_* +_+ ... 👍"); // "😊 *_* +_+ ... 👍"`,
+        'code': `RegExp.escape("(*.*)"); // "\\(\\*\\.\\*\\)"
+              RegExp.escape("｡^･ｪ･^｡") // "｡\\^･ｪ･\\^｡"
+              RegExp.escape("😊 *_* +_+ ... 👍"); // "😊 \\*_\\* \\+_\\+ \\.\\.\\. 👍"`,
         'info': 'Escapes any characters that would have special meaning in a regular expression.'
     }
 }, {
