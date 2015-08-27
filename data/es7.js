@@ -126,16 +126,16 @@ module.exports = [{
 }, {
     'String.prototype.padLeft': {
         'code': `"hello".padLeft(4)            #=> "hello"
-              "hello".padLeft(20)           #=> "hello               "
-              "hello".padLeft(20, \'1234\')   #=> "hello123412341234123"`,
-        'info': 'left justify and pad strings.'
+              "hello".padLeft(20)           #=> "               hello"
+              "hello".padLeft(20, \'1234\')   #=> "123412341234123hello"`,
+        'info': 'adds padding to the left of the string until it reaches the max length.'
     }
 }, {
     'String.prototype.padRight': {
         'code': `"hello".padRight(4)            #=> "hello"
-              "hello".padRight(20)           #=> "               hello"
-              "hello".padRight(20, \'1234\')   #=> "123412341234123hello"`,
-        'info': 'right justify and pad strings.'
+              "hello".padRight(20)           #=> "hello               "
+              "hello".padRight(20, \'1234\')   #=> "hello123412341234123"`,
+        'info': 'adds padding to the right of the string until it reaches the max length.'
     }
 }, {
     'String.prototype.trimLeft': {
