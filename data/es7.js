@@ -19,23 +19,6 @@ module.exports = [{
         'info': 'Deferred generators.'
     }
 }, {
-    'Object Observe': {
-        'code': `var obj = {};
-              Object.observe( obj,function(changes) {console.log(changes);} );
-              obj.name = "hemanth";
-              // Would log -> [ { type: \'new\`, object: { name: \'hemanth\' }, name: \'name\' } ]`,
-        'info': 'Asynchronously observing the changes to an object.'
-    }
-}, {
-    'Object.getOwnPropertyDescriptors': {
-        'code': `// Creating a shallow copy.
-                  var shallowCopy = Object.create(
-                  Object.getPrototypeOf(originalObject),
-                  Object.getOwnPropertyDescriptors(originalObject)
-              );`,
-        'info': 'Returns a property descriptor for an own property.'
-    }
-}, {
     'Object.values': {
         'code': `var person = { fname: "Hemanth", lname: "HM", location: "Earth", type: "Human" };
                   Object.values(person);
