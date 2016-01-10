@@ -39,19 +39,7 @@ module.exports = [{
               [0,+1,-1].includes(42); // false`,
         'info': 'Determines whether an array includes a certain element or not.'
     }
-}, {
-    'Typed Objects': {
-        'code': `var Point = new StructType({
-                            x: int32,
-                            y: int32
-                          });
-                          var point = new Point({
-                            x: 42,
-                            y: 420
-                          });`,
-        'info': 'Portable, memory-safe, efficient, and structured access to contiguously allocated data.'
-    }
-}, {
+},  {
     'Trailing commas in function syntax.': {
         'code': `var meow = function (cat1, cat2,) {}
                    Math.max(4,2,0,);`,
