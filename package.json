@@ -23,6 +23,6 @@
     "react-highlight": "^0.5.0",
     "react-tap-event-plugin": "^0.1.7",
     "uglify": "~0.1.5",
-    "watchify": "^3.2.3"
+    "watchify": "^3.7.0"
   }
 }
