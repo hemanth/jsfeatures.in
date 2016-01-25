@@ -9,7 +9,8 @@
     "build": "bash build.bash",
     "serve": "ecstatic -p 8000 .",
     "watch": "watchify main.js -o public/bundle.js -dv",
-    "preinstall": "npm i -g uglifyjs"
+    "preinstall": "npm i -g uglifyjs",
+    "deploy": "git push origin `git subtree split --prefix build_folder master`:gh-pages --force"
   },
   "dependencies": {
     "babelify": "^6.1.3",
