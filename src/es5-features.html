@@ -10,6 +10,8 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
 <link rel="import" href="../bower_components/polymer/polymer.html">
 <link rel="import" href="../bower_components/iron-ajax/iron-ajax.html">
+<link rel='import' href='../bower_components/syntax-highlight/syntax-highlight.html'>
+
 
 <dom-module id="es5-feaures">
 
@@ -44,20 +46,39 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         margin: 16px 0;
         color: #212121;
       }
+      <style>
+        :host {
+          display: block;
+        }
+        .markdown-body {
+          box-sizing: border-box;
+          max-width: 980px;
+          min-width: 200px;
+          padding: 45px;
+          margin: 0 auto;
+        }
+      </style>
     </style>
 
     <iron-ajax auto
-             url="./data/es5.json"
-             handle-as="text"
+             url="./data/5.json"
+             handle-as="json"
              last-response="{{response}}"></iron-ajax>
 
-           <template is="dom-repeat" items="{{_massage(response)}}">
+           <template is="dom-repeat" items="{{response}}">
              <div class="card">
                <h1>{{item.name}}</h1>
-               <h2>{{item.data.info}}</h2>
-               <p>{{item.data.code}}</p>
+               <h2>{{item.info}}</h2>
+               <div>
+                 <syntax-highlight>
+                 {{item.code}}
+                 </syntax-highlight>
+               </div>
              </div>
            </template>
+           <syntax-highlight lang="js">
+              var foo = 'Hello!';
+          </syntax-highlight>
 
   </template>
 
@@ -65,9 +86,9 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
     Polymer({
       is: 'es5-feaures',
-      _massage: function(response) {
-        return eval(response).map( k => ({name:Object.keys(k)[0],data:k[Object.keys(k)[0]]}) )
-      }
+      // _massage: function(response) {
+      //   return eval(response).map( k => ({name:Object.keys(k)[0],data:k[Object.keys(k)[0]]}) )
+      // }
     });
 
   </script>
