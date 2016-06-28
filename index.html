@@ -24,7 +24,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   <script>
 
     // setup Polymer options
-    window.Polymer = {lazyRegister: true, dom: 'shadow'};
+    window.Polymer = {lazyRegister: true};
 
     // load webcomponents polyfills
     (function() {
@@ -50,6 +50,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   </script>
 
   <link rel="import" href="/src/my-app.html">
+  <link href="../bower_components/prism-element/prism-highlighter.html" rel="import">
 
   <style>
 
@@ -65,7 +66,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
 </head>
 <body>
-
+  <prism-highlighter></prism-highlighter>
   <my-app></my-app>
 
 </body>
