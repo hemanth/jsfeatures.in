@@ -17,7 +17,7 @@
     "browserify": "^10.2.6",
     "ecstatic": "~0.8.0",
     "fbjs": "^0.8.0",
-    "highlight.js": "^9.0.0",
+    "highlight.js": "^9.5.0",
     "js-beautify": "^1.5.10",
     "material-ui": "^0.10.2",
     "react": "~0.13.3",
