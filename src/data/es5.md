@@ -3,9 +3,9 @@
 > Creates a new object with the specified prototype object and properties.
 
 ```js
-    o = {};
-    // is equivalent to:
-    o = Object.create(Object.prototype);
+o = {};
+// is equivalent to:
+o = Object.create(Object.prototype);
 ```
 
 ## Object.defineProperty
