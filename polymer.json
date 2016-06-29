@@ -1,6 +1,6 @@
 {
   "entrypoint": "index.html",
-  "shell": "src/my-app.html",
+  "shell": "src/js-features.html",
   "fragments": [
     "src/es5-features.html",
     "src/es6-features.html",
