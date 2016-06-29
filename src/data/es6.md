@@ -1,6 +1,6 @@
 ## Arrow functions
- > Lexical this, shoter functions.
- 
+ > Lexical this, shorter functions.
+
 ```js
 let obj = {
   method: function () {
@@ -16,7 +16,7 @@ let fib = (n) => { return n < 2 ? n : fib(n-1) + fib(n-2); };
 
 ## Block Scope
  > Declares a block scope local variable, optionally initializing it to a value.
- 
+
 ```js
 var aboutme = () => {
   {
@@ -29,7 +29,7 @@ var aboutme = () => {
 
 ## class
 > Syntactical sugar over prototype-based inheritance.
- 
+
 ```js
 class Person {
   constructor(name) {
@@ -76,7 +76,7 @@ class Derived prototype parent {}
 ```
 ## Computed property names
 > An expression in brackets `[]`
- 
+
 ```js
 var obj = {
   [foo + bar]: "o_0",
@@ -87,12 +87,12 @@ var obj = {
 };
 
 console.log( obj.foobar ); // o_0
-console.log( obj.foobaz ); // 0_o 
+console.log( obj.foobaz ); // 0_o
 ```
 
 ## Default Params
 > Initialize formal parameters with default values, if no value or undefined is passed.
- 
+
 ```js
 let greet = (msg="Hello",name="World!") => console.log(msg,name);
 
@@ -101,14 +101,14 @@ greet(); // Hello World!
 
 ## Destructuring
 > Extract data from arrays or objects.
- 
+
 ```js
 var {foo, bar} = {foo: "lorem", bar: "ipsum"};
 // foo => lorem and bar => ipsum
 ```
 ## Direct Proxy
 > Define custom behavior for fundamental operations of an object.
- 
+
 ```js
 let NegativeIndices = (array) => {
   return new Proxy(array, {
@@ -133,7 +133,7 @@ let NegativeIndices = (array) => {
 ```
 ## for-of loop
 > Loop over Iterator objects.
- 
+
 ```js
 for (let element of [1, 2, 3]) {
   console.log(element);
@@ -142,7 +142,7 @@ for (let element of [1, 2, 3]) {
 
 ## Generators
 > The function* declaration defines a generator function, which returns a Generator object.
- 
+
 ```js
 function *Counter(){
   var n = 0;
@@ -161,7 +161,7 @@ CountIter.next(); // {value: 2, done:false}
 
 ## Map
 > Map object is a simple and effective key/value data-structure.
- 
+
 ```js
 let m = new Map();
 m.set('answer', 42);
@@ -175,7 +175,7 @@ m.get(keyFunc)(); // "foo"
 ```
 ## modules
 > Module format common to CommonJS and AMD.
- 
+
 ```js
 /* In math.js */
 export function div(x, y) {
@@ -189,7 +189,7 @@ import {div, pi} from math;
 ```
 ## Better Object Literal
 > Better as in the example.
- 
+
 ```js
 var greet = {
   __proto__: theProtoObj,
@@ -203,7 +203,7 @@ var greet = {
 
 ## property-method-assignment
 > Method syntax is supported in object initializers.
- 
+
 ```js
 let person = {
   get name() {
@@ -227,7 +227,7 @@ let person = {
 
 ## Rest params
 > Variable number of arguments without using the arguments object.
- 
+
 ```js
 let sortRestArgs = (...theArgs) => theArgs.sort();
 
@@ -235,7 +235,7 @@ console.log(sortRestArgs(5,2,7,1)) // [1,2,5,7]
 ```
 ## Set
 > Store unique values of any type.
- 
+
 ```js
 var cards = new Set()
 cards.add('♠')
@@ -266,29 +266,29 @@ cards.size // Still four as ♣ was already there in the cards set.
 
 ## Spread operator
 > Expanded in places with `...` for arguments or multiple elements.
- 
+
 ```js
 var nodeList = document.querySelectorAll('div');
 var array = [...nodeList];
 ```
 ## Symbol
 > Unique and immutable data type.
- 
+
 ```js
 var Cat = (function() {
     var nameSymbl = Symbol('name');
- 
+
     function Cat(name) {
         this[nameSymbl] = name;
     }
- 
+
     Cat.prototype.getName = function() {
         return this[nameSymbl];
     };
- 
+
     return Cat;
 }());
- 
+
 var c = new Cat('milly');
 console.log("Cat's name: " + c.getName()); //milly
 delete c.name; // Even after deleting
@@ -297,7 +297,7 @@ console.log("Cat's name is still: " + c.getName() + ' is private.'); // so milly
 
 ## Tail recursion
 > Tail Calls, Optimization.
- 
+
 ```js
 let factorial = (n, acc = 1) => {
     if (n <= 1) return acc;
@@ -308,7 +308,7 @@ factorial(133333337);
 ```
 ## Template Literals
 > Better string formatting capabilities.
- 
+
 ```js
 var First = "Hemanth";
 var Last = " HM";
@@ -317,7 +317,7 @@ var Last = " HM";
 
 ## Unicode in Regex
 > Unicode aware regex.
- 
+
 ```js
 var string = 'foo𝌆bar';
 var match = string.match(/foo(.)bar/u);
@@ -327,7 +327,7 @@ console.log(match[1]);
 
 ## WeakMap
 > key/value pairs, keys are objects and the values can be arbitrary values, references to key objects are held "weakly"
- 
+
 ```js
 var wm = new WeakMap();
 
@@ -350,7 +350,7 @@ wm.has(wmk); //false
 
 ## WeakSet
 >Store weakly held objects in a collection.
- 
+
 ```js
   var ws = new WeakSet();
   var foo = {};

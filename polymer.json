@@ -2,8 +2,8 @@
   "entrypoint": "index.html",
   "shell": "src/my-app.html",
   "fragments": [
-    "src/ES5.html",
-    "src/ES6.html",
-    "src/ES7.html",
+    "src/es5-features.html",
+    "src/es6-features.html",
+    "src/es7-features.html"
   ]
 }
