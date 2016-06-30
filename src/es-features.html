@@ -1,0 +1,106 @@
+<link rel="import" href="../bower_components/polymer/polymer.html">
+<link rel="import" href="../bower_components/iron-ajax/iron-ajax.html">
+<link rel="import" href="../bower_components/marked-element/marked-element.html">
+
+<dom-module id="es-features">
+
+    <template>
+
+    <style>
+      :host {
+        display: block;
+        padding: 10px;
+      }
+      .card {
+        box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
+        padding: 16px;
+        margin: 24px;
+        border-radius: 5px;
+        background-color: #fff;
+        color: #757575;
+      }
+      .circle {
+        display: inline-block;
+        height: 64px;
+        width: 64px;
+        border-radius: 50%;
+        background: #ddd;
+        line-height: 64px;
+        font-size: 30px;
+        color: #555;
+        text-align: center;
+      }
+      h1 {
+        font-size: 22px;
+        margin: 16px 0;
+        color: #212121;
+      }
+
+      h2 {
+        cursor: pointer;
+      }
+      h2:hover {
+          text-decoration: underline;
+      }
+      .markdown-html pre {
+          background-color: #f9f9f9;
+          border-radius: 3px;
+          border: 1px dashed #ccc;
+          padding: 10px;
+          overflow: auto;
+          margin-left: 40px;
+      }
+      .token.operator, .token.entity, .token.url, .language-css .token.string, .style .token.string {
+          background-color: transparent;
+      }
+      <style>
+        :host {
+          display: block;
+        }
+        .markdown-body {
+          box-sizing: border-box;
+          max-width: 980px;
+          min-width: 200px;
+          padding: 45px;
+          margin: 0 auto;
+        }
+      </style>
+    </style>
+
+    <iron-ajax auto
+             url="./src/data/{{version}}.md"
+             handle-as="text"
+             on-response="onResponse"
+             last-response="{{response}}">
+    </iron-ajax>
+        <div class="card">
+            <marked-element markdown="{{response}}" smartypants="true">
+                <div class="markdown-html" on-tap="handleTap"></div>
+            </marked-element>
+        </div>
+    </template>
+
+    <script>
+        Polymer({
+            is: 'es-features',
+            properties: {
+              version: String
+            },
+            handleTap: function(e){
+                if(e.target && e.target.nodeName === 'H2'){
+                    location.hash = e.target.id;
+                }
+            },
+            onResponse: function(e){
+              var elem;
+              if(location.hash){
+                elem = this.$$(location.hash);
+                elem.scrollIntoView();
+              }
+
+              typeof Prism !== 'undefined' && Prism.highlightAll();
+            }
+        });
+    </script>
+
+</dom-module>
