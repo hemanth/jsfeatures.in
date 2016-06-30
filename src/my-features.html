@@ -97,6 +97,8 @@
                 elem = this.$$(location.hash);
                 elem.scrollIntoView();
               }
+
+              typeof Prism !== 'undefined' && Prism.highlightAll();
             }
         });
     </script>
