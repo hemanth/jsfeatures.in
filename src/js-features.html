@@ -121,7 +121,7 @@
       _pageChanged: function(page) {
         // load page import on demand.
         this.importHref(
-          this.resolveUrl(page + '-features.html'), null, null, true);
+          this.resolveUrl(page.toLowerCase() + '-features.html'), null, null, true);
       }
 
     });
