@@ -19,7 +19,7 @@
     "fbjs": "^0.8.0",
     "highlight.js": "^9.0.0",
     "js-beautify": "^1.5.10",
-    "material-ui": "^0.10.2",
+    "material-ui": "^0.13.3",
     "react": "~0.13.3",
     "react-highlight": "^0.5.0",
     "react-tap-event-plugin": "^0.1.7",
