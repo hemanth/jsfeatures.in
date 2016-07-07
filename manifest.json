@@ -1,6 +1,6 @@
 {
-  "name": "My App",
-  "short_name": "My App",
+  "name": "JSFeatures.in",
+  "short_name": "JSFeatures",
     "icons": [{
       "src": "images/app-icon-32.png",
       "type": "image/png",
@@ -14,7 +14,7 @@
       "sizes": "144x144",
       "type": "image/png"
     }, {
-      "src": "images/app-icon.svg",
+      "src": "images/android-chrome-192x192.png",
       "sizes": "192x192",
       "type": "image/svg"
     },{
