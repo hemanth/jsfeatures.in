@@ -1,5 +1,5 @@
 {
-  "name": "jsfeatures",
+  "name": "jsfeatures.in",
   "icons": [
     {
       "src": "\/images\/android-chrome-36x36.png",
@@ -49,5 +49,9 @@
     }
   ],
   "theme_color": "#ffffff",
-  "display": "standalone"
+  "background_color": "#ffffff",
+  "display": "standalone",
+  "start_url": "/",
+  "short_name": "jsfeatures"
 }
+
