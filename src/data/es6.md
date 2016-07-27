@@ -201,6 +201,23 @@ var greet = {
 };
 ```
 
+## Promises
+> An operation that hasn't completed yet, but is expected in the future.
+
+```js
+const p1 = new Promise((resolve, reject) => { 
+        if (···) {
+            resolve(value); // success
+        } else {
+            reject(reason); // failure
+        }
+      });
+
+p1
+.then(console.log)
+.catch(console.error)
+```
+
 ## property-method-assignment
 > Method syntax is supported in object initializers.
 
