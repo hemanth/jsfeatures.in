@@ -146,17 +146,17 @@ for (let element of [1, 2, 3]) {
 ```js
 function *Counter(){
   var n = 0;
-  while(1<2) {
+  while(n < 2) {
       yield n;
-      ++n;
+	  n++
   }
 }
 
-var CountIter = new Counter();
+var CountIter = Counter();
 
 CountIter.next(); // {value: 0, done:false}
 CountIter.next(); // {value: 1, done:false}
-CountIter.next(); // {value: 2, done:false}
+CountIter.next(); // {value: undefined, done:true}
 ```
 
 ## Map
