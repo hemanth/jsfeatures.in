@@ -170,8 +170,8 @@ m.has('answer'); // true
 m.delete('answer'); // true
 m.has('answer'); // false
 
-m.set(keyFunc,() => "foo");
-m.get(keyFunc)(); // "foo"
+m.set("keyFunc",() => "foo");
+m.get("keyFunc")(); // "foo"
 ```
 ## modules
 > Module format common to CommonJS and AMD.
