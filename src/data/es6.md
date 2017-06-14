@@ -44,7 +44,7 @@ class Person {
 
 class Hero extends Person {
   constructor(name, movement) {
-    this.name = name;
+    super(name);
     this.movement = movement;
   }
 
