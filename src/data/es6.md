@@ -44,7 +44,7 @@ class Person {
 
 class Hero extends Person {
   constructor(name, movement) {
-    this.name = name;
+    super(name);
     this.movement = movement;
   }
 
@@ -117,7 +117,7 @@ let NegativeIndices = (array) => {
       console.log('Proxy#get', array, name);
       index = parseInt(name);
       if (!isNaN(index) && index < 0) {
-        array[array.length + index];
+        return array[array.length + index];
       } else {
         return array[name];
       }
@@ -127,7 +127,7 @@ let NegativeIndices = (array) => {
 
 /*
 * Negative array indices:
-* array = NegativeIndices [4, 420, 42]
+* array = NegativeIndices([4, 420, 42])
 * array[-1] is 42
 */
 ```
@@ -146,17 +146,17 @@ for (let element of [1, 2, 3]) {
 ```js
 function *Counter(){
   var n = 0;
-  while(1<2) {
+  while(n < 2) {
       yield n;
-      ++n;
+	  n++
   }
 }
 
-var CountIter = new Counter();
+var CountIter = Counter();
 
 CountIter.next(); // {value: 0, done:false}
 CountIter.next(); // {value: 1, done:false}
-CountIter.next(); // {value: 2, done:false}
+CountIter.next(); // {value: undefined, done:true}
 ```
 
 ## Map
@@ -170,8 +170,14 @@ m.has('answer'); // true
 m.delete('answer'); // true
 m.has('answer'); // false
 
+var keyFunc = function() {};
+var keyObj = {}, = function() {};
+
 m.set(keyFunc,() => "foo");
 m.get(keyFunc)(); // "foo"
+
+m.set(keyObj,() => "bar");
+m.get(keyObj)(); // "bar"
 ```
 ## modules
 > Module format common to CommonJS and AMD.
