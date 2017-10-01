@@ -13,6 +13,7 @@ let fact = (n) => { return n === 0 ? 1 : n * fact(n-1); };
 
 let fib = (n) => { return n < 2 ? n : fib(n-1) + fib(n-2); };
 ```
+Refer [MDN: Arrow functions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions)
 
 ## Block Scope
  > Declares a block scope local variable, optionally initializing it to a value.
@@ -26,6 +27,7 @@ var aboutme = () => {
   console.log(investements,salary); // 1, undefined.
 }
 ```
+Refer [MDN: Block Scope](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/block)
 
 ## class
 > Syntactical sugar over prototype-based inheritance.
@@ -74,6 +76,9 @@ let parent = {};
 class Derived prototype parent {}
 */
 ```
+Refer [MDN: class](https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/class)
+
+
 ## Computed property names
 > An expression in brackets `[]`
 
@@ -98,6 +103,7 @@ let greet = (msg="Hello",name="World!") => console.log(msg,name);
 
 greet(); // Hello World!
 ```
+Refer [MDN: Default Params](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Default_parameters)
 
 ## Destructuring
 > Extract data from arrays or objects.
@@ -106,6 +112,8 @@ greet(); // Hello World!
 var {foo, bar} = {foo: "lorem", bar: "ipsum"};
 // foo => lorem and bar => ipsum
 ```
+Refer [MDN: Destructuring](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)
+
 ## Direct Proxy
 > Define custom behavior for fundamental operations of an object.
 
@@ -131,6 +139,9 @@ let NegativeIndices = (array) => {
 * array[-1] is 42
 */
 ```
+Refer [MDN: Direct Proxy](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy)
+
+
 ## for-of loop
 > Loop over Iterator objects.
 
@@ -139,6 +150,7 @@ for (let element of [1, 2, 3]) {
   console.log(element);
 }
 ```
+Refer [MDN: for-of loop](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for...of)
 
 ## Generators
 > The function* declaration defines a generator function, which returns a Generator object.
@@ -158,6 +170,7 @@ CountIter.next(); // {value: 0, done:false}
 CountIter.next(); // {value: 1, done:false}
 CountIter.next(); // {value: undefined, done:true}
 ```
+Refer [MDN: Generators](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Generator)
 
 ## Map
 > Map object is a simple and effective key/value data-structure.
@@ -179,6 +192,8 @@ m.get(keyFunc)(); // "foo"
 m.set(keyObj,() => "bar");
 m.get(keyObj)(); // "bar"
 ```
+Refer [MDN: Map](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map)
+
 ## modules
 > Module format common to CommonJS and AMD.
 
@@ -193,6 +208,8 @@ export var pi = 3.141593;
 import {div, pi} from math;
 
 ```
+Refer [MDN: modules](https://developer.mozilla.org/en-US/docs/Mozilla/JavaScript_code_modules)
+
 ## Better Object Literal
 > Better as in the example.
 
@@ -206,6 +223,7 @@ var greet = {
   }
 };
 ```
+
 ## Promises
 > Promises are a first class representation of a value that may be made available in the future.
 
@@ -224,6 +242,7 @@ var a = timeout(1000).then(() => {
     return Promise.all([timeout(100), timeout(200)]);
 });
 ```
+Refer [MDN: Promises](https://developer.mozilla.org/en-US/docs/Web/API/PromiseRejection/promise)
 
 ## property-method-assignment
 > Method syntax is supported in object initializers.
@@ -248,6 +267,8 @@ let person = {
 "Hemanth"
 
 ```
+Refer [MDN: Object Getter](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineGetter__)
+Refer [MDN: Object Setter](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineSetter__)
 
 ## Rest params
 > Variable number of arguments without using the arguments object.
@@ -257,6 +278,8 @@ let sortRestArgs = (...theArgs) => theArgs.sort();
 
 console.log(sortRestArgs(5,2,7,1)) // [1,2,5,7]
 ```
+Refer [MDN: Rest params](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters)
+
 ## Set
 > Store unique values of any type.
 
@@ -287,6 +310,7 @@ cards.add('♣')
 
 cards.size // Still four as ♣ was already there in the cards set.
 ```
+Refer [MDN: Set](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set)
 
 ## Spread operator
 > Expanded in places with `...` for arguments or multiple elements.
@@ -295,6 +319,8 @@ cards.size // Still four as ♣ was already there in the cards set.
 var nodeList = document.querySelectorAll('div');
 var array = [...nodeList];
 ```
+Refer [MDN: Spread operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_operator)
+
 ## Symbol
 > Unique and immutable data type.
 
@@ -318,6 +344,7 @@ console.log("Cat's name: " + c.getName()); //milly
 delete c.name; // Even after deleting
 console.log("Cat's name is still: " + c.getName() + ' is private.'); // so milly
 ```
+Refer [MDN: Symbol](https://developer.mozilla.org/en-US/docs/Glossary/Symbol)
 
 ## Tail recursion
 > Tail Calls, Optimization.
@@ -330,6 +357,7 @@ let factorial = (n, acc = 1) => {
 // NO S.O!
 factorial(133333337);
 ```
+
 ## Template Literals
 > Better string formatting capabilities.
 
@@ -338,6 +366,7 @@ var First = "Hemanth";
 var Last = " HM";
 `${ First } + ${ Last } = ${ First + Last}` // "Hemanth + HM = Hemanth HM"
 ```
+Refer [MDN: Template Literals](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals)
 
 ## Unicode in Regex
 > Unicode aware regex.
@@ -348,6 +377,7 @@ var match = string.match(/foo(.)bar/u);
 console.log(match[1]);
 // → '𝌆'
 ```
+Refer [MDN: Unicode in Regex](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicode)
 
 ## WeakMap
 > key/value pairs, keys are objects and the values can be arbitrary values, references to key objects are held "weakly"
@@ -371,6 +401,7 @@ wm.delete(wmk); // true
 
 wm.has(wmk); //false
 ```
+Refer [MDN: WeakMap](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakMap)
 
 ## WeakSet
 >Store weakly held objects in a collection.
@@ -391,3 +422,4 @@ wm.has(wmk); //false
 
   ws.clear(); // empty the whole WeakSet
 ```
+Refer [MDN: WeakSet](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakSet)
