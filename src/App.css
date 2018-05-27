@@ -1,0 +1,256 @@
+/* ====================================================
+ [Master Stylesheet]
+  Theme      : Aladdin 
+  Version    :  1.0
+  Author     :  Kalpesh Singh
+  Author URI :  https://knowkalpesh.in
+====================================================
+
+    TOC:
+  =======
+  0. Custom Variables
+
+  1. Primary Styles
+      a. Color Schemes for Homepage
+      b. Fun Facts Styles
+      c. Footer Styles
+
+  2. Preloader Styles
+
+  3. Main Components
+
+  4. Profile Section
+      a. Services Styles
+
+  5. Resume Section
+      a. Skills Styles
+      b. Recognition Styles
+
+  6. Portfolio Section
+      a. Testimonials Styles
+
+  7. Contact Section
+      a. Social and Map Styles
+
+===================================================== */
+
+
+
+ /* -------------------------------- 
+    1.b. Fun Facts Styles
+-------------------------------- */
+
+/* Olive Scheme  
+----------------------------------*/
+
+
+/* --------------------------------- */
+/* 0. Custom Variables
+ ----------------------------------- */
+ :root {
+  --primary-color: hsl(221, 93%, 16%);
+  --brand-color: linear-gradient(90deg,hsl(215, 100%, 50%),hsl(233, 100%, 54%));
+  --border-color: hsl(215, 100%, 50%);
+  --brand-font: 'Montserrat', sans-serif;
+  --radius: 4px;
+  --shadow: 0 0 50px 10px hsla(0, 0%, 0%, 0.05);
+  --bg-color: hsl(216, 33%, 97%);
+  --link-color: hsl(238, 100%, 47%);
+  --tag-primary: hsl(199, 91%, 63%);
+  --tag-secondary: hsl(44, 94%, 53%);
+  --tag-tertiary: hsl(340, 100%, 75%);
+
+   /* Corrects font smoothing for webkit */
+   -webkit-font-smoothing: inherit;
+   -moz-osx-font-smoothing: inherit;
+
+}
+
+::selection {
+  background: var(--link-color);
+  color: #fff;
+  text-shadow: none;
+}
+
+::placeholder {
+  color: #c8d4e2;
+}
+a,
+a:visited,
+a:hover,
+a:active,
+a:target {
+  color: var(--link-color);
+}
+input {
+  font-family: inherit;
+  border: 0;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  border: solid 1px transparent;
+}
+label {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+input:focus {
+  outline: 0;
+  border: solid 1px var(--primary-color);
+}
+button {
+  font-family: inherit;
+  border: 0;
+  padding: 0.8em 2em;
+  border: solid 1px transparent;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+button:focus {
+  outline: 0;
+  border: solid 1px var(--primary-color);
+}
+h1, h2, h3, h4, h5, h6, p, pre {
+  margin: 0;
+}
+
+body {
+  font-family: var(--brand-font);
+  background-color: var(--bg-color);
+  color: var(--primary-color);
+  margin: 0;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 5em 1fr 5em;
+  grid-gap: 1rem;
+  max-width: 1300px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.search-bar {
+  grid-column: 2 / 2;
+  position: relative;
+  margin: 1em 1em 0.5em;
+}
+.search-bar__icon {
+  font-size: 1.2rem;
+  position: absolute;
+  top: calc(50% + 3px);
+  left: 12px;
+  line-height: 1;
+}
+.search-bar__label {
+  display: inline-block;
+  font-size: 0.75rem;
+  margin-bottom: 0.5em;
+}
+.search-bar__input {
+  font-size: 1.2rem;
+  padding: 1em 1em 1em 2em;
+  width: 100%;
+  box-sizing: border-box;
+}
+.search-filter {
+  grid-column: 2 / 2;
+  margin: 0 1em 3em;
+  text-align: center;
+}
+.search-filter > button {
+  font-size: 0.8rem;
+}
+.search-filter > button.is-selected {
+  background-color: var(--primary-color);
+  color: #fff;
+}
+.search-filter > button:not(:last-child) {
+  margin-right: 0.5em;
+}
+.cards {
+  grid-column: 2 / 2;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 22.5em);
+}
+.card {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  padding: 1.25em 1.25em 0.75em;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  margin: 1em;
+  box-sizing: border-box;
+}
+.card__title {
+  font-size: 1.05rem;
+  margin-bottom: 0.5em;
+}
+.card__desc {
+  font-size: 0.85rem;
+  color: hsl(0, 0%, 46%);
+  margin-bottom: 1.875em;
+}
+.card__content.card__content {
+  font-size: 0.85rem;
+  margin-bottom: 1.875em;
+}
+.card__link {
+  margin-top: auto;
+  display: block;
+  font-size: 0.75rem;
+}
+.card__tags {
+  display: flex;
+  list-style-type: none;
+  padding-left: 0;
+  margin: 0;
+  font-size: 0.625rem;
+}
+.card__tags > .tag {
+  background-color: tomato;
+  color: #fff;
+  font-size: 0.65rem;
+  padding: 0.5em 1em;
+  border-radius: calc(var(--radius) / 2);
+}
+.card__tags > .tag:not(:last-child) {
+  margin-right: 1em;
+}
+.tag.tag--primary {
+  background-color: var(--tag-primary);
+}
+.tag.tag--secondary {
+  background-color: var(--tag-secondary);
+}
+.tag.tag--tertiary {
+  background-color: var(--tag-tertiary);
+}
+
+@media only screen and (max-width: 48rem) {
+  body {
+      margin-bottom: 4.1em;
+  }
+  .container {
+      grid-template-columns: 0 1fr 0;
+      grid-gap: 0;
+  }
+  .search-filter > button:not(:last-child) {
+      margin-right: 1em;
+  }
+  .search-filter {
+      padding: 1em;
+      background-color: #fff;
+      margin: 0;
+      position: fixed;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      box-shadow: var(--shadow);
+  }
+  .search-filter > button {
+      font-size: 0.7rem;
+  }
+  .cards {
+      grid-template-columns: minmax(22.5em, 1fr);
+  }
+}
