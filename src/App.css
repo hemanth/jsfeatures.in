@@ -187,11 +187,12 @@ body {
 }
 .card__desc {
   font-size: 0.85rem;
+  line-height: 1.4;
   color: hsl(0, 0%, 46%);
   margin-bottom: 1.875em;
 }
 .card__content.card__content {
-  font-size: 0.85rem;
+  font-size: 1rem;
   margin-bottom: 1.875em;
 }
 .card__link {
