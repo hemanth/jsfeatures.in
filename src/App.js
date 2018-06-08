@@ -9,30 +9,49 @@ import es7 from './data/es7';
 
 class App extends Component {
 
+  consolidatedData = [...es5, ...es6, ...es7];
+
   state = {
-    data: [...es5, ...es6, ...es7],
+    data: this.consolidatedData,
     es5,
     es6,
-    es7
+    es7,
+    activeTab: -1, //-1 indicates 'All' tab,
+    searchKeyword: ''
+  }
+
+  searchWithTab = (keyword, data) => {
+    const filteredData = data.filter((item, idx) => {
+      return item["title"].toLowerCase().includes(keyword.toLowerCase());
+    });
+    return filteredData;
   }
 
   filterCards = (value) => {
-    const filteredData = this.state.data.filter((item, idx) => {
-      return item["title"].toLowerCase().includes(value.toLowerCase());
-    });
+    const activeTab = this.state.activeTab;
+    let filteredData = (activeTab == -1) ? this.consolidatedData : this.state[activeTab];
+    if (value) {
+      filteredData = this.searchWithTab(value, filteredData);
+    }
     this.setState({
-      data: filteredData
+      data: filteredData,
+      searchKeyword: value
     });
   }
 
   updateData = (subset) => {
     if (subset == -1) {
+      const data = this.searchWithTab(this.state.searchKeyword, this.consolidatedData);
       this.setState({
-        data: [...es5, ...es6, ...es7]
+        data,
+        activeTab: subset
       });
     } else {
+      const data = this.searchWithTab(this.state.searchKeyword, this.state[subset]);
       this.setState({
-        data: this.state[subset]
+        data,
+        activeTab: subset,
+
       });
     }
   }
@@ -40,7 +59,7 @@ class App extends Component {
   render() {
     return (
       <div className="container">
-        <Search data={this.filterCards} />
+        <Search filterCards={this.filterCards}/>
         <Tabs updateData={this.updateData} />
         <div className="cards">
           <Card data={this.state.data} />
