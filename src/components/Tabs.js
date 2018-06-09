@@ -23,7 +23,7 @@ class Tabs extends Component {
         { id: 0, name: 'All', value: '-1'},
         { id: 1, name: 'ES5', value: 'es5'},
         { id: 2, name: 'ES6', value: 'es6'},
-        { id: 3, name: 'ES7 and Beyond', value: 'es7'}
+        { id: 3, name: 'ES7', value: 'es7'}
     ]
 
     getTabs = (items) => {
