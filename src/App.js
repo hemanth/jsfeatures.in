@@ -67,7 +67,7 @@ class App extends Component {
         <footer className="site-footer">
           <strong>&copy; 2018</strong>
           <div>
-            <a className="site-footer__github" href="https://github.com/hemanth/jsfeatures.in/tree/jsfeatures2.0" target="_blank">
+            <a className="site-footer__github" href="https://github.com/hemanth/jsfeatures.in/tree/jsfeatures2.0" target="_blank" rel="noopener noreferrer">
               <img src="/assets/icons/github.svg" alt="See code on GitHub" /> 
             </a>
           </div>
