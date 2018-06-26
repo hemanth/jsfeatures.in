@@ -113,6 +113,11 @@ h1, h2, h3, h4, h5, h6, p, pre {
   margin: 0;
 }
 
+img {
+  display: block;
+  width: 100%;
+}
+
 body {
   font-family: var(--brand-font);
   background-color: var(--bg-color);
@@ -227,6 +232,19 @@ body {
   background-color: var(--tag-tertiary);
 }
 
+.site-footer {
+  grid-column: 1 / 4;
+  background-color: hsl(0, 0%, 100%);
+  padding: 1em 3em;
+  display: flex;
+  justify-content: space-between;
+}
+
+.site-footer__github {
+  display: block;
+  width: 1.5em;
+}
+
 @media only screen and (max-width: 48rem) {
   body {
       margin-bottom: 4.1em;
@@ -253,5 +271,8 @@ body {
   }
   .cards {
       grid-template-columns: minmax(22.5em, 1fr);
+  }
+  .site-footer {
+    display: none;
   }
 }
