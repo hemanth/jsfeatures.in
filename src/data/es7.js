@@ -101,16 +101,16 @@ console.log(mySet.toJSON()) //{"1":1,"NaN":null}`,
 info; //{ fname: "Hemanth", lname: "HM", location: "Earth", type: "Human" }`,
         'info': 'Spread properties for object destructuring assignment.'
     }, {
-        'title': 'String.prototype.padLeft',
-        'code': `"hello".padLeft(4); //"hello"
-"hello".padLeft(20); //"hello"
-"hello".padLeft(20, \'1234\') //"hello123412341234123"`,
+        'title': 'String.prototype.padEnd',
+        'code': `"hello".padEnd(4); //"hello"
+"hello".padEnd(20); //"hello               "
+"hello".padEnd(20, \'1234\') //"hello123412341234123"`,
         'info': 'left justify and pad strings.'
     }, {
-        'title': 'String.prototype.padRight',
-        'code': `"hello".padRight(4); //"hello"
-"hello".padRight(20; //hello"
-"hello".padRight(20, \'1234\'); //"123412341234123hello"`,
+        'title': 'String.prototype.padStart',
+        'code': `"hello".padStart(4); //"hello"
+"hello".padStart(20); //"               hello"
+"hello".padStart(20, \'1234\'); //"123412341234123hello"`,
         'info': 'Right justify and pad strings.'
     }, {
         'title': 'String.prototype.trimLeft',
