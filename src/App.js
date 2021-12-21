@@ -6,16 +6,19 @@ import Card from './components/Card';
 import es5 from './data/es5';
 import es6 from './data/es6';
 import es7 from './data/es7';
+import es21 from './data/es21';
+
 
 class App extends Component {
 
-  consolidatedData = [...es5, ...es6, ...es7];
+  consolidatedData = [...es5, ...es6, ...es7,...es21];
 
   state = {
     data: this.consolidatedData,
     es5,
     es6,
     es7,
+    es21,
     activeTab: -1, //-1 indicates 'All' tab,
     searchKeyword: ''
   }
@@ -65,7 +68,7 @@ class App extends Component {
           <Card data={this.state.data} />
         </div>
         <footer className="site-footer">
-          <strong>&copy; 2018</strong>
+          <strong>&copy; 2021</strong>
           <div>
             <a className="site-footer__github" href="https://github.com/hemanth/jsfeatures.in/tree/jsfeatures2.0" target="_blank" rel="noopener noreferrer">
               <img src="/assets/icons/github.svg" alt="See code on GitHub" /> 
