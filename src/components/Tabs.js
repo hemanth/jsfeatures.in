@@ -21,9 +21,10 @@ class Tabs extends Component {
 
     items = [
         { id: 0, name: 'All', value: '-1'},
-        { id: 1, name: 'ES5', value: 'es5'},
-        { id: 2, name: 'ES6', value: 'es6'},
-        { id: 3, name: 'ES7', value: 'es7'}
+        { id: 1, name: 'ES2009', value: 'es5'},
+        { id: 2, name: 'ES2015', value: 'es6'},
+        { id: 3, name: 'ES2016', value: 'es7'},
+        { id: 4, name: 'ES2021', value: 'es21'}
     ]
 
     getTabs = (items) => {
